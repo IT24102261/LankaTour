@@ -6,6 +6,7 @@ import { useCatalog } from '../context/CatalogContext'
 import { useNotice } from '../context/NoticeContext'
 import { readImageFile } from '../utils/readImageFile'
  
+
 export default function FeedbackList({ items, placesById, showPlaceLink = true, allowReply = false }) {
   const { currentUser, isAdmin } = useAuth()
   const { updateFeedback, deleteFeedback, respondToFeedback, deleteResponse } = useCatalog()
@@ -245,4 +246,5 @@ export default function FeedbackList({ items, placesById, showPlaceLink = true, 
       })}
     </div>
   )
+}
 }
